@@ -27,9 +27,15 @@ This project is a Python-based tool that allows users to generate Kaspa cryptocu
 3. **Python packages**:
    Install the necessary Python packages using `pip`:
    ```bash
-   pip3 install argparse shutil / pip install argparse shutil
+   pip3 install argparse
    ```
+4. **Binary execution**:  
+You may need to authorize binary execution. On Mac, go to **Security & Privacy** and click **Allow** after running the binary, or on Linux use the following command to make it executable:  
+```bash
+sudo chmod +x kaspaper-linux
+``` 
 
+This version should be clearer and more accurate.
 ---
 
 ## Usage
