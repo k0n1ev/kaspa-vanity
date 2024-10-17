@@ -23,7 +23,7 @@ def get_kaspaper_command():
     elif system == 'Darwin':  # macOS is detected as 'Darwin'
         return './kaspaper-mac'
     elif system == 'Windows':
-        return 'kaspaper.exe'
+        return 'kaspaper.exe'  # Windows uses .exe extension
     else:
         print(f"Unsupported operating system: {system}")
         sys.exit(1)
@@ -31,9 +31,18 @@ def get_kaspaper_command():
 # Function to run the kaspaper command
 def run_kaspaper_command(temp_filename):
     kaspaper_command = get_kaspaper_command()
-    command = f'{kaspaper_command} {temp_filename}'
-    with open('/dev/null', 'w') as devnull:
-        subprocess.run(command, shell=True, stdout=devnull, stderr=devnull)
+    
+    system = platform.system()
+    
+    # Use 'nul' for Windows and '/dev/null' for Unix-like systems
+    if system == 'Windows':
+        command = f'{kaspaper_command} {temp_filename}'
+        with open('nul', 'w') as devnull:
+            subprocess.run(command, shell=True, stdout=devnull, stderr=devnull)
+    else:
+        command = f'{kaspaper_command} {temp_filename}'
+        with open('/dev/null', 'w') as devnull:
+            subprocess.run(command, shell=True, stdout=devnull, stderr=devnull)
 
 # Function to read and extract the address from HTML
 def extract_address_from_html(temp_filename):
