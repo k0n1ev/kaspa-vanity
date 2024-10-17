@@ -97,3 +97,6 @@ Result saved to qp...jj.html
 
 - Add support for multi-core processing to speed up the address generation process.
 - Provide a user-friendly GUI for specifying prefix/suffix and monitoring progress.
+
+## Support Project
+If you liked or found this project useful, donations are welcome to: `kaspa:qr62af6d77jvqpdrgmsgcrf7d2vgp2z9h4dyxvq6eqxe0jg4qs3dxm04a0000`
