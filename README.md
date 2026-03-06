@@ -67,33 +67,16 @@ Tried     28560619 |     394418 addr/s total |    76031 addr/s last sec
 Found match!
 
 Address:          kaspa:qqq30xhq386pxpvgjqlnzss8qqjl2dsweqxj2827m7tvyrcq8t62csf7kaspa
+
 Private key hex:  51a7b6ba0701411327f32bc13e79d2746005df02464a0156d1ece5709343325e
+
 XOnly pubkey hex: 01179ae089f4130588903f3142070025f5360ec80d251d5edf96c20f003af4ac
+
 Attempts:         28560610
+
 Elapsed:          71.63 s
+
 Saved to:         kaspa_vanity_result.json
-
----
-
-# Example: prefix vanity
-
-Example:
-
-./target/release/kaspa-vanity --prefix gpu
-
-Example result:
-
-kaspa:qgpu8l6c0sjrqx3n9e0k2h6v78mfwq8vks9f3k7y0n
-
----
-
-# Example: prefix + suffix
-
-./target/release/kaspa-vanity -p dev -s kaspa
-
-Example result:
-
-kaspa:qdev9x8k3m2n7s5c0r8h6v4t3ykaspa
 
 ---
 
