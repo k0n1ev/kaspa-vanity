@@ -1,0 +1,4 @@
+/target
+*.json
+*.log
+.DS_Store
